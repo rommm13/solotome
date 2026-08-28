@@ -26,7 +26,7 @@ Primary Russian tagline: **Личный каталог книг в твоём Go
 10. Closing CTA.
 
 ## Screenshot replacement contract
-Temporary renders are deliberately isolated and referenced through a replaceable asset map. Replace them with final real screenshots using the same semantic slots and aspect ratios where practical, so the site composition does not need redesigning.
+Temporary renders are deliberately isolated in `website/public/assets/`. Replace image files with final real screenshots using the same filenames/aspect ratios where practical, so the site composition does not need redesigning.
 
 ## Motion
 - 0.7–1.2 second restrained reveal transitions.
