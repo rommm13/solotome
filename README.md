@@ -2,7 +2,7 @@
 
 **Личный каталог книг в твоём Google-аккаунте.**
 
-SoloTome — открытый персональный каталог для прочитанных, текущих и запланированных книг. Он создаёт отдельный экземпляр приложения и таблиц в Google-аккаунте пользователя: без общей базы библиотек и без необходимости поднимать собственный сервер.
+SoloTome — персональный каталог для прочитанных, текущих и запланированных книг. Он создаёт отдельный экземпляр приложения и таблиц в Google-аккаунте пользователя: без общей базы библиотек и без необходимости поднимать собственный сервер.
 
 🌐 **Сайт проекта:** https://rommm13.github.io/solotome/
 
@@ -37,4 +37,4 @@ SoloTome — открытый персональный каталог для п�
 
 ---
 
-SoloTome is under active development. A project license will be added before the first public application release.
+SoloTome is under active development and is intended to be released as open source. A project license will be added before the first public application release.

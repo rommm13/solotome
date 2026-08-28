@@ -36,6 +36,9 @@ jobs:
       - name: Build website
         working-directory: website
         run: npm run build
+      - name: Check bundle budget
+        working-directory: website
+        run: npm run check:bundle
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

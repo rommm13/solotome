@@ -409,20 +409,20 @@ export default function App() {
           <div className="source-panel">
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <Code2 className="source-panel__icon" />
-              <SectionEyebrow>Открытый исходный код</SectionEyebrow>
-              <h2>Исходный код на GitHub.</h2>
-              <p>SoloTome распространяется бесплатно. Исходный код открыт на GitHub, поэтому можно посмотреть, что именно устанавливается и как приложение работает с данными.</p>
+              <SectionEyebrow>Публичный репозиторий</SectionEyebrow>
+              <h2>Разработка SoloTome на GitHub.</h2>
+              <p>Публичный репозиторий уже содержит сайт и документацию проекта. Код приложения и установщик будут опубликованы здесь после приёмки MVP и проверки установки с чистого Google-аккаунта.</p>
               <a className="button button--solid" href="https://github.com/rommm13/solotome" target="_blank" rel="noreferrer"><Code2 /> GitHub <ExternalLink /></a>
             </motion.div>
             <div className="source-panel__repo" aria-label="Репозиторий SoloTome">
               <div className="repo-bar"><Code2 /><span>rommm13 / <b>solotome</b></span></div>
               <div className="repo-tree">
-                <span><BookOpen /> app</span>
                 <span><Globe2 /> website</span>
-                <span><Layers3 /> installer</span>
                 <span><Code2 /> docs</span>
+                <span><Layers3 /> .github</span>
+                <span><BookOpen /> README.md</span>
               </div>
-              <div className="repo-caption"><span className="status-dot" /> public · open source</div>
+              <div className="repo-caption"><span className="status-dot" /> public · active development</div>
             </div>
           </div>
         </section>
