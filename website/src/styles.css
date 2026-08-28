@@ -23,6 +23,7 @@
   --radius-lg: 32px;
   --content: min(1240px, calc(100vw - 64px));
   --display: 'Prata', Georgia, 'Times New Roman', serif;
+  color-scheme: dark;
 }
 
 :root[data-theme='light'] {
@@ -42,6 +43,7 @@
   --inverse-text: #f4f1eb;
   --shadow: 0 28px 80px rgba(56, 48, 40, 0.14);
   --soft-shadow: 0 16px 42px rgba(56, 48, 40, 0.1);
+  color-scheme: light;
 }
 
 * {
@@ -88,6 +90,31 @@ img {
 
 ::selection {
   background: rgba(180, 176, 168, 0.32);
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 11px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface-solid);
+  color: var(--text);
+  transform: translateY(-160%);
+  transition: transform .2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--metal-bright);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 .site-shell {

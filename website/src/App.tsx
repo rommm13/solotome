@@ -225,6 +225,7 @@ export default function App() {
 
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#main-content">Перейти к содержанию</a>
       <div className="top-grain" aria-hidden="true" />
       <header className="site-header">
         <a href="#top" className="site-header__brand"><BrandMark /></a>
@@ -240,7 +241,7 @@ export default function App() {
         </div>
       </header>
 
-      <main>
+      <main id="main-content">
         <section className="hero" id="top">
           <div className="hero__ambient hero__ambient--one" aria-hidden="true" />
           <div className="hero__ambient hero__ambient--two" aria-hidden="true" />
