@@ -1752,3 +1752,20 @@ button:focus-visible {
   .product-canvas__screen--3 { right: -10%; top: 125px; }
   .product-canvas__screen figcaption span { display: none; }
 }
+
+
+/* Final visual-QA corrections */
+.theme-stage__half img {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0,0,0,.96) 67%, transparent 86%);
+  mask-image: radial-gradient(ellipse at center, #000 52%, rgba(0,0,0,.96) 67%, transparent 86%);
+}
+@media (max-width: 900px) {
+  .product-canvas__screen--1 { left: -9% !important; right: auto !important; top: 128px !important; }
+  .product-canvas__screen--2 { left: 50% !important; right: auto !important; top: 44px !important; }
+  .product-canvas__screen--3 { right: -9% !important; left: auto !important; top: 128px !important; }
+}
+@media (max-width: 560px) {
+  .product-canvas__screen--1 { left: -10% !important; top: 125px !important; }
+  .product-canvas__screen--2 { left: 50% !important; top: 38px !important; }
+  .product-canvas__screen--3 { right: -10% !important; left: auto !important; top: 125px !important; }
+}
