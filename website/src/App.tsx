@@ -74,12 +74,12 @@ function ProductRail({ theme }: { theme: EffectiveTheme }) {
     ? [
         { src: 'dark-library.webp', title: 'Библиотека', text: 'Прочитанное, текущие книги и планы в одном спокойном каталоге.' },
         { src: 'dark-details.webp', title: 'Карточка книги', text: 'Издание, оценка и заметки остаются рядом с книгой, а не разбросаны по сервисам.' },
-        { src: 'dark-recommendations.webp', title: 'Рекомендации', text: 'Не отдельная социальная лента, а необязательная подборка на основе вашей библиотеки.' },
+        { src: 'dark-recommendations.webp', title: 'Рекомендации', text: 'Необязательная подборка с учётом личной библиотеки, оценок и заметок.' },
       ]
     : [
         { src: 'light-library.webp', title: 'Библиотека', text: 'Прочитанное, текущие книги и планы в одном спокойном каталоге.' },
         { src: 'light-details.webp', title: 'Карточка книги', text: 'Издание, оценка и заметки остаются рядом с книгой, а не разбросаны по сервисам.' },
-        { src: 'light-recommendations.webp', title: 'Рекомендации', text: 'Не отдельная социальная лента, а необязательная подборка на основе вашей библиотеки.' },
+        { src: 'light-recommendations.webp', title: 'Рекомендации', text: 'Необязательная подборка с учётом личной библиотеки, оценок и заметок.' },
       ]
 
   return (
@@ -293,8 +293,8 @@ export default function App() {
         <section className="section section--product" id="product">
           <motion.div className="section-heading" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
             <SectionEyebrow>Для своей библиотеки</SectionEyebrow>
-            <h2>Книги остаются в центре.</h2>
-            <p>SoloTome не превращает чтение в социальную сеть. Здесь нет чужих профилей и ленты. Есть каталог, статусы, оценки, заметки и ясное представление о собственной библиотеке.</p>
+            <h2>Личный каталог книг.</h2>
+            <p>SoloTome создан для личного учёта книг. Здесь нет профилей других пользователей, ленты и социальных функций. Можно отметить, что уже прочитано, что читается сейчас и что хочется прочитать, сохранить оценку и заметки.</p>
           </motion.div>
           <ProductRail theme={theme} />
         </section>
@@ -309,8 +309,8 @@ export default function App() {
             <img src={ASSET('light-trio.webp')} alt="SoloTome в светлой теме" loading="lazy" />
           </div>
           <div className="theme-stage__label">
-            <SectionEyebrow>Две темы, один характер</SectionEyebrow>
-            <h2>Система задаёт свет.<br />SoloTome сохраняет материал.</h2>
+            <SectionEyebrow>Оформление</SectionEyebrow>
+            <h2>Тёмная и светлая темы.</h2>
           </div>
         </section>
 
@@ -318,7 +318,7 @@ export default function App() {
           <div className="data-grid">
             <motion.div className="section-heading section-heading--left" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <SectionEyebrow>Где хранятся данные</SectionEyebrow>
-              <h2>Личный экземпляр в вашем Google-аккаунте.</h2>
+              <h2>Данные в Google-аккаунте.</h2>
               <p>При установке SoloTome создаёт собственное приложение и таблицы в Google-аккаунте. У SoloTome нет общей базы пользователей, в которой хранятся чужие библиотеки.</p>
               <div className="trust-list">
                 <span><ShieldCheck /> Нет общей пользовательской базы</span>
@@ -347,7 +347,7 @@ export default function App() {
             </motion.div>
             <motion.div className="section-heading section-heading--left" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <SectionEyebrow>Каталог в Google Sheets</SectionEyebrow>
-              <h2>Список книг не зависит от интерфейса.</h2>
+              <h2>Отдельный экспорт каталога.</h2>
               <p>SoloTome автоматически поддерживает отдельный экспорт каталога. Его можно открыть без приложения, скачать или использовать для переноса данных.</p>
               <p>Если перестать пользоваться SoloTome, список книг никуда не исчезнет.</p>
             </motion.div>
@@ -358,8 +358,8 @@ export default function App() {
           <div className="recommendation-grid">
             <motion.div className="section-heading section-heading--left" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <SectionEyebrow>Рекомендации</SectionEyebrow>
-              <h2>Gemini можно подключить. Можно не подключать.</h2>
-              <p>При желании SoloTome использует библиотеку, оценки и заметки, чтобы подобрать следующие книги. Эта функция необязательна и не нужна для обычной работы каталога.</p>
+              <h2>Необязательные рекомендации Gemini.</h2>
+              <p>При желании SoloTome может использовать Gemini, чтобы подбирать книги с учётом прочитанного, оценок и заметок. Эта функция необязательна и не нужна для обычной работы каталога.</p>
               <div className="recommendation-signals">
                 <div><span>01</span><p>Прочитанные книги</p></div>
                 <div><span>02</span><p>Оценки</p></div>
@@ -381,8 +381,8 @@ export default function App() {
             </motion.div>
             <motion.div className="section-heading section-heading--left" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <SectionEyebrow>Добавление книг</SectionEyebrow>
-              <h2>Поиск, список или ручной ввод.</h2>
-              <p>Метаданные можно подтянуть из книжных каталогов, проверить перед сохранением и дополнить своими заметками. Массовый импорт не превращает библиотеку в свалку молчаливых дублей.</p>
+              <h2>Добавление и импорт книг.</h2>
+              <p>Метаданные можно подтянуть из книжных каталогов, проверить перед сохранением и дополнить своими заметками. При импорте SoloTome предупреждает о дубликатах и конфликтах до сохранения.</p>
               <div className="feature-pills">
                 <span><Search /> По названию</span>
                 <span><Plus /> Вручную</span>
@@ -395,7 +395,7 @@ export default function App() {
         <section className="section section--install" id="install">
           <motion.div className="section-heading" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
             <SectionEyebrow>Установка</SectionEyebrow>
-            <h2>Открывается в браузере.<br />На телефоне можно вынести на экран «Домой».</h2>
+            <h2>Работа в браузере и установка на телефон.</h2>
             <p>SoloTome работает как обычное веб-приложение на компьютере, планшете и телефоне. На iPhone для установки PWA мы рекомендуем Chrome, потому что этот сценарий протестирован.</p>
           </motion.div>
           <InstallSteps />
@@ -410,8 +410,8 @@ export default function App() {
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <Code2 className="source-panel__icon" />
               <SectionEyebrow>Открытый исходный код</SectionEyebrow>
-              <h2>Можно посмотреть, что именно устанавливается.</h2>
-              <p>SoloTome распространяется бесплатно. Исходный код открыт на GitHub, поэтому архитектура приложения, работа с данными и механизм установки не спрятаны за закрытым сервисом.</p>
+              <h2>Исходный код на GitHub.</h2>
+              <p>SoloTome распространяется бесплатно. Исходный код открыт на GitHub, поэтому можно посмотреть, что именно устанавливается и как приложение работает с данными.</p>
               <a className="button button--solid" href="https://github.com/rommm13/solotome" target="_blank" rel="noreferrer"><Code2 /> GitHub <ExternalLink /></a>
             </motion.div>
             <div className="source-panel__repo" aria-label="Репозиторий SoloTome">
@@ -430,8 +430,8 @@ export default function App() {
         <section className="closing">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20%' }}>
             <BrandMark compact />
-            <h2>Своя библиотека.<br />В своём аккаунте.</h2>
-            <p>Без отдельного сервера и без общей базы пользователей.</p>
+            <h2>SoloTome для личной библиотеки.</h2>
+            <p>Каталог работает в Google-аккаунте и не требует отдельного личного сервера.</p>
             <div className="hero__buttons hero__buttons--center">
               <a className="button button--solid" href="#install">Установить SoloTome <ArrowRight /></a>
               <a className="button button--outline" href="https://github.com/rommm13/solotome" target="_blank" rel="noreferrer"><Code2 /> GitHub</a>
