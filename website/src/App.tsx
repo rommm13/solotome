@@ -9,7 +9,6 @@ import {
   ExternalLink,
   FileSpreadsheet,
   FileText,
-  FlaskConical,
   Globe2,
   Layers3,
   Monitor,
@@ -236,9 +235,9 @@ export default function App() {
           <motion.div className="hero__copy" variants={stagger} initial="hidden" animate="show">
             <motion.div variants={fadeUp}><SectionEyebrow>Персональная библиотека</SectionEyebrow></motion.div>
             <motion.h1 variants={fadeUp}>SoloTome</motion.h1>
-            <motion.p className="hero__tagline" variants={fadeUp}>Личная библиотека в собственном Google-аккаунте.</motion.p>
+            <motion.p className="hero__tagline" variants={fadeUp}>Личная библиотека в собственном Google‑аккаунте.</motion.p>
             <motion.p className="hero__lead" variants={fadeUp}>
-              Каталог прочитанного и планов, оценки, заметки, необязательные рекомендации Gemini и экспериментальная синхронизация с PocketBook и Kindle. Данные остаются в Google-аккаунте пользователя.
+              Каталог прочитанного и планов, оценки, заметки, необязательные рекомендации Gemini, синхронизация с PocketBook и экспериментальная поддержка Kindle. Данные остаются в Google‑аккаунте пользователя.
             </motion.p>
             <motion.div className="hero__buttons" variants={fadeUp}>
               <a className="button button--solid" href="#install">Установить SoloTome <ArrowRight /></a>
@@ -297,11 +296,11 @@ export default function App() {
         <section className="theme-stage" aria-label="Светлая и тёмная темы">
           <div className="theme-stage__half theme-stage__half--dark">
             <span>Тёмная</span>
-            <img src={ASSET('dark-trio.webp')} alt="SoloTome в тёмной теме" loading="lazy" />
+            <img src={ASSET('dark-library.webp')} alt="Библиотека SoloTome в тёмной теме" loading="lazy" />
           </div>
           <div className="theme-stage__half theme-stage__half--light">
             <span>Светлая</span>
-            <img src={ASSET('light-trio.webp')} alt="SoloTome в светлой теме" loading="lazy" />
+            <img src={ASSET('light-library.webp')} alt="Библиотека SoloTome в светлой теме" loading="lazy" />
           </div>
           <div className="theme-stage__label"><SectionEyebrow>Оформление</SectionEyebrow><h2>Тёмная и светлая темы.</h2></div>
         </section>
@@ -310,8 +309,8 @@ export default function App() {
           <div className="data-grid">
             <motion.div className="section-heading section-heading--left" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
               <SectionEyebrow>Где хранятся данные</SectionEyebrow>
-              <h2>Данные в Google-аккаунте.</h2>
-              <p>При установке SoloTome создаёт собственное приложение и таблицы в Google-аккаунте. Общей пользовательской базы с библиотеками других людей нет.</p>
+              <h2>Данные в Google‑аккаунте.</h2>
+              <p>При установке SoloTome создаёт собственное приложение и таблицы в Google‑аккаунте. Общей пользовательской базы с библиотеками других людей нет.</p>
               <div className="trust-list">
                 <span><ShieldCheck /> Нет общей пользовательской базы</span>
                 <span><Database /> Каталог в Google Sheets</span>
@@ -346,12 +345,12 @@ export default function App() {
 
         <section className="sync-strip" id="sync">
           <motion.div className="sync-strip__copy" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
-            <SectionEyebrow>Экспериментальная функция</SectionEyebrow>
+            <SectionEyebrow>PocketBook · Kindle экспериментально</SectionEyebrow>
             <h2>Синхронизация с PocketBook и Kindle.</h2>
-            <p>Экспериментальная интеграция SoloTome с PocketBook и Kindle предназначена для синхронизации перечня книг и статусов чтения. Файлы книг между сервисами не передаются.</p>
-            <small><FlaskConical /> Интерфейсы интеграций могут меняться по мере тестирования.</small>
+            <p>SoloTome синхронизирует с PocketBook перечень книг и статусы чтения. Поддержка Kindle пока экспериментальная и может меняться по мере тестирования. Файлы книг между сервисами не передаются.</p>
+            <small>Kindle: экспериментальная поддержка.</small>
           </motion.div>
-          <div className="sync-strip__visual" aria-label="Экспериментальная синхронизация SoloTome с PocketBook и Kindle">
+          <div className="sync-strip__visual" aria-label="Синхронизация SoloTome с PocketBook и экспериментальная поддержка Kindle">
             <span className="sync-device">PocketBook</span>
             <span className="sync-arrow"><RefreshCw /></span>
             <span className="sync-core">SoloTome</span>
@@ -391,10 +390,6 @@ export default function App() {
             <p>SoloTome работает на компьютере, планшете и телефоне. На мобильных устройствах интерфейс специально оптимизирован, а PWA можно добавить на домашний экран.</p>
           </motion.div>
           <InstallSteps />
-          <motion.div className="install-visual" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-15%' }}>
-            <img src={ASSET('install-iphone.webp')} alt="Временный макет установки SoloTome на iPhone" loading="lazy" />
-            <div className="install-visual__note">Временный визуальный макет. Перед релизом будет заменён реальными экранами браузера и SoloTome.</div>
-          </motion.div>
         </section>
 
         <section className="section section--source" id="source">
@@ -403,7 +398,7 @@ export default function App() {
               <Code2 className="source-panel__icon" />
               <SectionEyebrow>Публичный репозиторий</SectionEyebrow>
               <h2>Разработка SoloTome на GitHub.</h2>
-              <p>Публичный репозиторий уже содержит сайт и документацию проекта. Код приложения и установщик будут опубликованы здесь после приёмки MVP и проверки установки с чистого Google-аккаунта.</p>
+              <p>Публичный репозиторий уже содержит сайт и документацию проекта. Код приложения и установщик будут опубликованы здесь после приёмки MVP и проверки установки с чистого Google‑аккаунта.</p>
               <a className="button button--solid" href="https://github.com/rommm13/solotome" target="_blank" rel="noreferrer"><Code2 /> GitHub <ExternalLink /></a>
             </motion.div>
             <div className="source-panel__repo" aria-label="Репозиторий SoloTome">
@@ -419,7 +414,7 @@ export default function App() {
         <section className="closing">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20%' }}>
             <BrandMark compact />
-            <h2>Личная библиотека в собственном Google-аккаунте.</h2>
+            <h2>Личная библиотека в собственном Google‑аккаунте.</h2>
             <p>Без отдельного сервера и без общей базы пользовательских библиотек.</p>
             <div className="hero__buttons hero__buttons--center">
               <a className="button button--solid" href="#install">Установить SoloTome <ArrowRight /></a>
